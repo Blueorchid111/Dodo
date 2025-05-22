@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        background:url("C:/Users/regis_misscrs/Downloads/pale-vintage-world-map.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    body {
+        color: #333;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        color: #60a8ea;
+        font-size: 2.5em;
+    }
+    div {
+        font-size: 1.2em;
+        line-height: 1.5;
+        border-style:double;
+        border-color: #2c3e50;
+        padding: 10px;
+        background-color: rgba(227, 178, 105, 0.8);
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 600px;
+    }
+    img {
+        max-width: 200px;
+        transition: transform 0.2s;
+    }
+    img:hover {
+        transform: scale(1.5);
+    }
+    div h2 {
+        color: #e67e22;
+        font-size: 2em;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <body>
+        <h1>Dodo</h1>
+        <div class="dodo-about">
+            <p>The dodo was a flightless bird that lived on the island of Mauritius. It became extinct in the late 17th century.</p>
+            <img src="C:/Users/regis_misscrs/Downloads/dodo.jpg" alt="Dodo Bird">
+        </div>
+        <div class="arrival-of-dutch">
+            <h2>Arrival of the Dutch</h2>
+            <img src="C:/Users/regis_misscrs/Downloads/dutch.jpg" alt="Dutch Arrival">
+            <p>The Dutch arrived in Mauritius in 1598, and they were the first Europeans to encounter the dodo. They found the bird to be large and flightless, making it an easy target for hunting.</p>
+            <p>As the Dutch settled on the island, they began to exploit its resources, including the dodo. The bird was hunted for its meat, which was considered a delicacy.</p>
+            <p>Unfortunately, the dodo's population declined rapidly due to overhunting and habitat destruction. By the late 17th century, the dodo was extinct.</p>
+        </div>
+        <div class="dodo-appearence">
+            <h2>Known appearance</h2>
+            <img src="C:/Users/regis_misscrs/Downloads/dodo.jpg" alt="Dodo Bird">
+            <p>The dodo was a large bird, about 1 meter tall, with a stout body, short legs, and a large beak. It had greyish-brown feathers and a tuft of curly feathers on its tail.</p>
+            <p>Its wings were small and not suitable for flight, which is why it became extinct after the arrival of humans on the island.</p>
+            <h2>Unknown appearance</h2>
+            <img src="C:/Users/regis_misscrs/Downloads/dodo.jpg" alt="Dodo Bird">
+            <p>There are many theories about the dodo's appearance, but no one knows for sure what it looked like. Some believe it had colorful feathers, while others think it was more drab.</p>
+            <p>There are no complete specimens of the dodo, and the few remaining illustrations and descriptions are inconsistent.</p>
+            <p>Some scientists believe that the dodo may have had a more vibrant appearance, with bright colors and patterns, but this is purely speculative.</p>
+            <p>Overall, the dodo's appearance remains a mystery, and it is one of the many reasons why this bird has captured the imagination of people around the world.</p>
+        </div>
+        <div class="dodo-extinction">
+            <h2>Extinction</h2>
+            <img src="C:/Users/regis_misscrs/Downloads/dodo.jpg" alt="Dodo Bird">
+            <p>The dodo's extinction is a tragic example of how human activity can lead to the demise of a species. The bird was hunted to extinction within a century of the Dutch arrival on Mauritius.</p>
+            <p>In addition to hunting, the introduction of non-native species, such as rats and pigs, further contributed to the dodo's decline. These animals preyed on dodo eggs and competed for food resources.</p>
+            <p>The last confirmed sighting of a dodo was in 1662, and by the end of the 17th century, the species was considered extinct.</p>
+            <p>Today, the dodo is often used as a symbol of extinction and the importance of conservation efforts to protect endangered species.</p>
+    </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const divs = document.querySelectorAll("div:not(.dodo-about)");
+        divs.forEach(div => {
+            div.style.opacity = "0";
+            div.style.transition = "opacity 0.5s ease-in-out";
+        });
+
+        window.addEventListener("scroll", function () {
+            divs.forEach(div => {
+                const rect = div.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    div.style.opacity = "1";
+                } else {
+                    div.style.opacity = "0";
+                }
+            });
+        });
+    });
+</script>
+</head>
+</html>
